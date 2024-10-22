@@ -1,0 +1,57 @@
+<section class="msger">
+    <div class="container">
+        <div class="row">
+            <header class="msger-header">
+                <div class="msger-header-title">
+                    <i class="fas fa-comment-alt"></i> Chat with Ally
+                </div>
+                <div class="msger-header-options d-none d-md-block"> <!-- Hide on mobile -->
+                    <span><i class="fas fa-cog"></i></span>
+                </div>
+            </header>
+            <div class="col-md-3 d-none d-md-block"> <!-- Hide on mobile -->
+                <div class="action-list">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4>Chats</h4>
+                        <span (click)="createNewSession()" style="cursor: pointer;">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let session of sessions; let i = index" (click)="switchSession(session.id)">
+                            {{ session.name }}
+                            <button (click)="deleteSession(i); $event.stopPropagation();" class="delete-button">
+                                <i class="fas fa-trash"></i> 
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <main class="msger-chat" #messagesContainer>
+                    <div *ngFor="let message of currentMessages" class="msg"
+                        [ngClass]="{'user': message.sender === 'user', 'bot': message.sender === 'Tamanna'}">
+                        <div class="msg-bubble">
+                            <div class="msg-info">
+                                <div class="msg-info-name">{{ message.sender }}</div>
+                                <div class="msg-info-time">{{ message.time }}</div>
+                            </div>
+                            <div class="msg-text" [innerHTML]="message.text"></div>
+                        </div>
+                    </div>
+                    <!-- Typing Indicator -->
+                    <div *ngIf="isTyping" class="typing-indicator">
+                        <img src="../../../assets/images/Chat-Animation.gif" alt="Typing..." class="typing-gif">
+                    </div>
+                </main>
+
+                <form class="msger-inputarea" (ngSubmit)="sendMessage()">
+                    <input type="text" class="msger-input" placeholder="Enter your message..." [(ngModel)]="userInput"
+                        name="message">
+                    <button type="submit" class="msger-send-btn">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

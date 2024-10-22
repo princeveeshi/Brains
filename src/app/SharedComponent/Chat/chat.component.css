@@ -1,0 +1,175 @@
+.container {
+    margin-top: 5px;
+  }
+  
+ 
+.action-list {
+    background-color: #f8f9fa; /* Light background for action list */
+    padding: 10px;
+    border-right: 1px solid #dee2e6; /* Optional border */
+}
+.action-list h4 {
+    margin-bottom: 15px; /* Space between header and list */
+}
+  
+  .user-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .list-group-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .list-group-item:hover {
+    background-color: #e9ecef;
+    
+  }
+  
+  .msger {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    /* margin: 25px 10px; */
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .msger-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #004445;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .msger-chat {
+    padding: 10px;
+    height: 450px;
+    overflow-y: auto;
+    background-color: #f4f7f9;
+  }
+  
+
+
+  .msg {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+  
+  .msg.user {
+    justify-content: flex-end; /* Align user messages to the right */
+  }
+  
+  .left-msg {
+    justify-content: flex-start;
+  }
+  
+  .right-msg {
+    flex-direction: row-reverse;
+  }
+  
+  .msg-img {
+    width: 30px;
+    height: 30px;
+    background: #ddd;
+    border-radius: 50%;
+    background-size: cover;
+  }
+  
+  .msg-bubble {
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin: 0 10px;
+  }
+  
+  .msg-info {
+    margin-bottom: 5px;
+  }
+  
+  .msg-info-name {
+    font-weight: bold;
+    color: #FF851B;
+  }
+  
+  .msg-info-time {
+    font-size: 0.85em;
+  }
+  
+  .msg-text {
+    color: #333;
+    font-size: 0.95em;
+  }
+  
+  .msger-inputarea {
+    display: flex;
+    position: relative;
+    padding: 10px;
+    background: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .msger-input {
+    flex: 1;
+    border: solid;
+    /* padding: 10px; */
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .msger-send-btn {
+    background-color: #004445;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+
+  /* Responsive styles */
+@media (max-width: 768px) {
+    .action-list {
+        display: none; /* Hide on mobile */
+    }
+    .msger-header-options {
+        display: none; /* Hide settings icon on mobile */
+    }
+}
+
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .typing-gif {
+    width: 150px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .delete-button {
+    background: none; /* No background */
+    border: none; /* No border */
+    color: #dc3545; /* Bootstrap's danger color */
+    cursor: pointer; /* Pointer cursor */
+    padding: 0; /* Remove padding */
+    font-size: 0.9em; /* Smaller font size */
+}
+
+.delete-button:hover {
+    text-decoration: underline; /* Underline on hover */
+}

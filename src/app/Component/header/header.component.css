@@ -1,0 +1,92 @@
+/* Mega Menu Styling */
+.mega-dropdown {
+    position: relative;
+}
+
+.mega-menu {
+    width: 1050px;
+    /* Ensures it takes the full width */
+    padding: 20px;
+    background-color: #2c7873;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: none;
+    position: absolute;
+    left: 10%;
+    /* Start from the middle of the screen */
+    transform: translateX(-50%);
+    /* Shift the mega menu back by 50% to center it */
+    z-index: 1000;
+
+}
+
+.mega-dropdown:hover .mega-menu {
+    display: block;
+}
+
+.mega-menu .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mega-menu .dropdown-header {
+    font-weight: bold;
+   
+    color: #a2d4d4;
+}
+.dropdown-header {
+    white-space: normal; /* Allow wrapping to the next line */
+    overflow-wrap: break-word; /* Ensure long words break if necessary */
+    margin-bottom: 10px; /* Adjust spacing between header and items */
+  }
+  
+  .dropdown-item {
+    display: flex; /* Align icon and text properly */
+    align-items: center; /* Center vertically */
+  }
+  
+  .dropdown-item i {
+    margin-right: 5px; /* Space between icon and text */
+  }
+
+.mega-menu .dropdown-item {    
+    color: white;
+}
+
+/* Adjusting navbar links for better alignment */
+.navbar-nav .nav-item .nav-link {
+    padding: 15px 20px;
+}
+
+
+/* Optional: Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .mega-menu {
+        width: 100%;
+        /* Make it 100% width on small screens */
+        left: 0;
+        transform: none;
+        padding: 10px;
+    }
+
+    .mega-menu .row {
+        flex-direction: column;
+    }
+}
+
+
+
+/* Dropdown item hover effect */
+.mega-menu .dropdown-item:hover {
+    background-color: #004445;
+    color: #fff;
+}
+
+.dropdown-item i {
+    color: #FF851B; 
+    
+  }
+  
+  /* Icon color on hover */
+  .dropdown-item:hover i {
+    color: #a2d4d4;
+  }

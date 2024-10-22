@@ -1,0 +1,81 @@
+<section class="contact_section">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center mt-3">
+        <h2 class="txt text-center">Get In Touch</h2>
+      </div>
+    </div>
+    <div class="row">    
+      <div class="col-md-6">       
+        <p class="">
+          We would love to hear from you! Whether you have questions, feedback, 
+          or just want to chat, feel free to reach out to us. Our team is here to assist 
+          you in any way we can.
+        </p>
+
+        <div class="contact-details mt-4">
+          <p>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+            <strong>Address:</strong> <br>
+             34 Street Name, City Name Here, United States
+          </p>
+          <p>
+            <i class="fa fa-phone" aria-hidden="true"></i>&nbsp;
+            <strong>Phone: </strong><br>
+           {{phoneNo}}
+          </p>
+          <p>
+            <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;
+            <strong>Email:</strong><br>
+             {{email}}
+          </p>
+        </div>
+      </div>
+      <div class="col-md-5 mx-auto">
+        <div class="form_container">
+          
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+              <div class="form-group col">
+                <input type="text" class="form-control" formControlName="name" placeholder="Your Name" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-lg-6">
+                <input type="text" class="form-control" formControlName="phone" placeholder="Phone Number" />
+              </div>
+              <div class="form-group col-lg-6">
+                <select formControlName="service" class="form-control wide">
+                  <option value="">Select Service</option>
+                  <option *ngFor="let service of services" [value]="service">{{ service }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <input type="email" class="form-control" formControlName="email" placeholder="Email" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <textarea class="message-box form-control" formControlName="message" placeholder="Message"></textarea>
+              </div>
+            </div>
+            <div class="btn_box">
+              <button type="submit" [disabled]="contactForm.invalid">SEND</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Page Up Button -->
+<button
+  *ngIf="isScrollUpVisible"
+  class="scroll-up-btn"
+  (click)="scrollToTop()"
+  aria-label="Scroll to top">
+  &#8679; <!-- This is an upward arrow -->
+</button>

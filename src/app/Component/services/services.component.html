@@ -1,0 +1,37 @@
+<section class="service_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2 class="txt">Our Services</h2>
+        <p class="col-lg-8 px-0">
+          MrD-Brains provides desktop and web app development, IT infrastructure,
+          hosting, security solutions, and staffing outsourcing to empower your business.
+        </p>
+      </div>
+      <div class="service_container">
+        <div class="row">
+          <div class="col-md-4" *ngFor="let service of services">
+            <div class="card box">
+              <div class="card-body">
+                <h4 class="card-title txt">
+                  <i [class]="service.iconClass" aria-hidden="true"></i><br>
+                  {{ service.title }}
+                </h4>
+                <p class="card-text">
+                  {{ service.description }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Page Up Button -->
+<button
+*ngIf="isScrollUpVisible"
+class="scroll-up-btn"
+(click)="scrollToTop()"
+aria-label="Scroll to top">
+&#8679; <!-- This is an upward arrow -->
+</button>

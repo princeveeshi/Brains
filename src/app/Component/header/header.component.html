@@ -1,0 +1,198 @@
+<header class="header_section">
+    <div class="header_bottom">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light custom_nav-container">
+                <!-- Logo with routerLink -->
+                <a class="navbar-brand" routerLink="/">
+                    <img src="assets/images/logo.png" alt="Finter Logo" style="height: 40px;">
+                </a>
+
+                <!-- Toggler button for mobile view -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <!-- Technology Mega Menu -->
+                        <li class="nav-item dropdown mega-dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="techDropdown" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Technology
+                            </a>
+                            <div class="dropdown-menu mega-menu" aria-labelledby="techDropdown">
+                                <div class="container">
+                                 
+                                        <div class="row">
+                                            <!-- Column 1: Frontend -->
+                                            <div class="col-lg-3 col-md-6">
+                                                <a class="dropdown-header" routerLink="/frontend-development">
+                                                    <h6>Frontend Development Technologies</h6>
+                                                </a>
+                                                <a class="dropdown-item" >
+                                                    <i class="fa-brands fa-react"></i> React Js Development
+                                                </a>
+                                                <a class="dropdown-item">
+                                                    <i class="fa-brands fa-angular"></i> Angular Js Development
+                                                </a>
+                                                <a class="dropdown-item" >
+                                                    <i class="fa-brands fa-vuejs"></i> Vue.js Development
+                                                </a>
+                                            </div>
+                                    
+                                            <!-- Column 2: Backend -->
+                                            <div class="col-lg-3 col-md-6">
+                                                <a class="dropdown-header" routerLink="/backend-development">
+                                                    <h6>Backend Development Technologies</h6>
+                                                </a>
+                                                <a class="dropdown-item" >
+                                                    <i class="fa-brands fa-python"></i> .Net Development
+                                                </a>
+                                                <a class="dropdown-item">
+                                                    <i class="fa-brands fa-node"></i> Node.js Development
+                                                </a>
+                                                <a class="dropdown-item" >
+                                                    <i class="fa-brands fa-python"></i> Python Development
+                                                </a>
+                                                <a class="dropdown-item" >
+                                                    <i class="fa-brands fa-gem"></i> Ruby on Rails Development
+                                                </a>
+                                            </div>
+                                    
+                                            <!-- Column 3: Mobile -->
+                                            <div class="col-lg-3 col-md-6">
+                                                <a class="dropdown-header" routerLink="/mobile-development">
+                                                    <h6>Mobile Development Technologies</h6>
+                                                </a>
+                                                <a class="dropdown-item">
+                                                    <i class="fab fa-apple"></i> iOS Application
+                                                </a>
+                                                <a class="dropdown-item" >
+                                                    <i class="fab fa-android"></i> Android Application
+                                                </a>
+                                                <a class="dropdown-item" >
+                                                    <i class="fab fa-flutter"></i> Flutter Application
+                                                </a> 
+                                            </div>
+                                    
+                                            <!-- Column 4: Database -->
+                                            <div class="col-lg-3 col-md-6">
+                                                <a class="dropdown-header" routerLink="/database-development">
+                                                    <h6>Database Development Technologies</h6>
+                                                </a>
+                                                <a class="dropdown-item" >
+                                                    <i class="fa-solid fa-database"></i> MySQL
+                                                </a>
+                                                <a class="dropdown-item" >
+                                                    <i class="fa-solid fa-database"></i> MongoDB
+                                                </a>
+                                                <a class="dropdown-item" >
+                                                    <i class="fa-solid fa-database"></i> PostgreSQL
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <!-- Column 5: Frameworks -->
+                                            <div class="col-lg-3 col-md-6">
+                                                <a class="dropdown-header" routerLink="/frameworks-development">
+                                                    <h6>Frameworks Dev. Technologies</h6>
+                                                </a>
+                                                <a class="dropdown-item" >
+                                                    <i class="fa-brands fa-python"></i> Django Development
+                                                </a>
+                                                <a class="dropdown-item" >
+                                                    <i class="fa-solid fa-leaf"></i> Spring Development
+                                                </a>
+                                                <a class="dropdown-item" >
+                                                    <i class="fa-brands fa-python"></i> Flask Development
+                                                </a>
+                                            </div>
+                                    
+                                            <!-- Column 6: Cloud -->
+                                            <div class="col-lg-3 col-md-6">
+                                                <a class="dropdown-header" routerLink="/cloud-development">
+                                                    <h6>Cloud Development Technologies</h6>
+                                                </a>
+                                                <a class="dropdown-item">
+                                                    <i class="fab fa-aws"></i> AWS Server
+                                                </a>
+                                                <a class="dropdown-item">
+                                                    <i class="fab fa-microsoft"></i> Azure Server
+                                                </a>
+                                                <a class="dropdown-item" >
+                                                    <i class="fab fa-google"></i> Google Cloud Server
+                                                </a>
+                                            </div>
+                                    
+                                            <!-- Column 7: DevOps -->
+                                            <div class="col-lg-3 col-md-6">
+                                                <a class="dropdown-header" routerLink="/devops-development">
+                                                    <h6>DevOps Development Technologies</h6>
+                                                </a>
+                                                <a class="dropdown-item" >
+                                                    <i class="fab fa-docker"></i> Docker
+                                                </a>
+                                                <a class="dropdown-item" >
+                                                    <i class="fab fa-kubernetes"></i> Kubernetes
+                                                </a>
+                                                <a class="dropdown-item" >
+                                                    <i class="fas fa-tools"></i> Jenkins
+                                                </a>
+                                            </div>
+                                    
+                                            <!-- Column 8: CMS -->
+                                            <div class="col-lg-3 col-md-6">
+                                                <a class="dropdown-header" routerLink="/cms-development">
+                                                    <h6>CMS Development Technologies</h6>
+                                                </a>
+                                                <a class="dropdown-item" >
+                                                    <i class="fa-brands fa-wordpress"></i> WordPress Development
+                                                </a>
+                                                <a class="dropdown-item">
+                                                    <i class="fa-brands fa-drupal"></i> Drupal Development
+                                                </a>
+                                                <a class="dropdown-item" >
+                                                    <i class="fa-brands fa-joomla"></i> Joomla Development
+                                                </a>
+                                            </div>
+                                        </div>
+                                 
+                                    
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/service">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/contact">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/chatBot">Advance</a>
+                        </li>
+                    </ul>
+
+                    <!-- Search button -->
+                    <!-- <form class="form-inline ms-3">
+                        <button class="btn my-2 my-sm-0 nav_search-btn" type="submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </form> -->
+                </div>
+
+
+            </nav>
+        </div>
+    </div>
+</header>

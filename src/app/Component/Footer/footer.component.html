@@ -1,0 +1,104 @@
+<section class="info_section">
+    <div class="container">
+      <div class="info_top">
+        <div class="row">
+          <div class="col-md-3">
+            <a class="navbar-brand" routerLink="/">
+              <img src="assets/images/logo.png" alt="Finter Logo" style="height: 40px;">
+            </a>
+          </div>
+          <div class="col-md-5">
+            <div class="info_contact">
+              <a href="#" (click)="showMap()">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>Location</span>
+              </a>
+              
+              <a href="tel:+919682401266">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>{{phoneNo}}</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="social_box">
+              <a href="#">
+                <i class="fab fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info_bottom">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="info_detail">
+              <h5>Company</h5>
+              <p>
+                MrD-Brains delivers tailored software solutions, including desktop and web apps, IT infrastructure, hosting, security, and staffing. Our expertise empowers businesses to thrive with innovative and efficient services.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="info_form">
+              <h5>NEWS LETTER</h5>
+              <form (ngSubmit)="onSubscribe()">
+                <input type="text" placeholder="Enter Your Email" [(ngModel)]="uEmail" name="email" required/>
+                <button type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="info_detail">
+              <h5>Services</h5>
+              <p>
+                MrD-Brains provides desktop and web app development, IT infrastructure, hosting, security solutions, and staffing outsourcing to empower your business.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <div>
+              <h5>links</h5>
+              <ul class="info_menu">
+                <li>
+                  <a routerLink="/">Home</a>
+                </li>
+                <li>
+                  <a routerLink="/about">About</a>
+                </li>
+                <li>
+                  <a routerLink="/service">Services</a>
+                </li>
+                <li>
+                  <a routerLink="/team">Team</a>
+                </li>
+                <li class="mb-0">
+                  <a routerLink="/contact">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span>{{ currentYear }}</span> All Rights Reserved By
+        <a href="#">MrD-Brains</a>
+      </p>
+    </div>
+  </footer>
